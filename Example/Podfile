@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CloudVisionKit_Example', :exclusive => true do
+  pod "CloudVisionKit", :path => "../"
+end
+
+target 'CloudVisionKit_Tests', :exclusive => true do
+  pod "CloudVisionKit", :path => "../"
+
+  
+end
