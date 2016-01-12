@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudVisionKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        let bundle = NSBundle.mainBundle()
+
+        guard let path = bundle.pathForResource("faulkner", ofType: "jpg") else {
+            NSLog("Image not found.")
+            return true
+        }
+
+        let data = NSData(contentsOfFile: path)!
+
+        let feature = GCVFeature(type: .Label, maxResults: 10)
+        let request = GCVSingleRequest(image: data, features: [feature])
+        let r = GCVRequest(requests: [request])
+
+        let api = CloudVision()
+        api.annotateImage(r) {
+            response in
+
+            for r in response.responses {
+                for a in r.labelAnnotations {
+                    NSLog("result: %@", a.description)
+                }
+            }
+        }
+
         return true
     }
 

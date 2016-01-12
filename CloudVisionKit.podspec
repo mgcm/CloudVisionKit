@@ -1,32 +1,24 @@
-#
-# Be sure to run `pod lib lint CloudVisionKit.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = "CloudVisionKit"
   s.version          = "0.1.0"
-  s.summary          = "A short description of CloudVisionKit."
+  s.summary          = "A Swift interface for Google's Cloud Vision API."
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+                    The Google Cloud Vision API enables developers to use Google Vision technology within their own applications.
+                    The Vision API allows easy integration of vision detection features within developer applications, including image labeling, face
+                    and landmark detection, optical character recognition (OCR), and tagging of explicit content.
+
+                    This framework provides a Swift interface to the Google Cloud Vision API.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/CloudVisionKit"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/mgcm/CloudVisionKit"
   s.license          = 'MIT'
   s.author           = { "Milton Moura" => "miltonmoura@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CloudVisionKit.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/mgcm/CloudVisionKit.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/mgcm'
 
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -34,7 +26,6 @@ Pod::Spec.new do |s|
     'CloudVisionKit' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Alamofire', '~> 3.0'
+  s.dependency 'SwiftyJSON', '~> 2.3.1'
 end

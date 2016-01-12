@@ -1,12 +1,16 @@
+
 source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
 use_frameworks!
 
+pod 'Alamofire', '~> 3.0'
+pod 'SwiftyJSON', '~> 2.3.1'
+
 target 'CloudVisionKit_Example', :exclusive => true do
-  pod "CloudVisionKit", :path => "../"
+    pod "CloudVisionKit", :path => "../"
 end
 
 target 'CloudVisionKit_Tests', :exclusive => true do
-  pod "CloudVisionKit", :path => "../"
-
-  
+    pod "CloudVisionKit", :path => "../"
 end
