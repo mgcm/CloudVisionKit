@@ -13,6 +13,7 @@ import Alamofire
 
 
 enum GCVApiError : ErrorType {
+    case InvalidCredentials
     case RequestSizeExceeded
     case ImageDataSizeExceeded
     case ImagesPerRequestExceeded
@@ -99,14 +100,25 @@ public enum GCVFeatureDetectionType: String {
 
 
 public struct GCVResponse {
-    public var responses: [GCVAnnotateImageResponse]
+    public var responses:   [GCVAnnotateImageResponse]
+    public var error:       GCVStatus
 
     init(values: Array<AnyObject>) {
         self.responses = []
+        self.error = GCVStatus(code: 0, message: "", status: "")
 
         for a: AnyObject in values {
             self.responses += [GCVAnnotateImageResponse(annotations: a)]
         }
+    }
+
+    init(error: Dictionary<String, AnyObject>) {
+        self.responses = []
+        
+        let code = error["code"] as! NSNumber
+        let msg = error["message"] as! String
+        let status = error["status"] as! String
+        self.error = GCVStatus(code: code.unsignedIntegerValue, message: msg, status: status)
     }
 }
 
@@ -126,7 +138,7 @@ public struct GCVAnnotateImageResponse {
         self.logoAnnotations = []
         self.labelAnnotations = []
         self.textAnnotations = []
-        self.error = GCVStatus(code: 0, message: "")
+        self.error = GCVStatus(code: 0, message: "", status: "")
 
         for key in annotDict.keys {
             switch (key) {
@@ -179,21 +191,27 @@ public struct GCVEntityAnnotation {
 public struct GCVStatus {
     public var code:    UInt
     public var message: String
+    public var status:  String
 }
 
 
 final public class CloudVision {
 
-    public init() {
+    private var apiKey: String?
 
+    public init(apiKey: String) {
+        self.apiKey = apiKey
     }
 
     public func annotateImage(request: GCVRequest, closure: (GCVResponse) -> Void) {
-        let apiManager = GCVApiManager()
+        let apiManager = GCVApiManager(apiKey: self.apiKey!)
         
         do {
             let payload = try request.json()
             try apiManager.performRequest(payload, closure: { (response) -> Void in
+                if response.error.code > 0 {
+                    NSLog("GCV Error: \(response.error.message)")
+                }
                 closure(response)
             })
         } catch GCVApiError.RequestSizeExceeded {

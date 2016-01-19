@@ -20,6 +20,10 @@ it, simply add the following line to your Podfile:
 pod "CloudVisionKit"
 ```
 
+To set the API credentials, use cocoapods-keys and the following command:
+
+    pod keys set GoogleCloudVisionAPIKey YOUR-API-KEY-HERE
+
 ## Author
 
 Milton Moura, miltonmoura@gmail.com

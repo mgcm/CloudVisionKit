@@ -7,6 +7,14 @@ use_frameworks!
 pod 'Alamofire', '~> 3.0'
 pod 'SwiftyJSON', '~> 2.3.1'
 
+plugin 'cocoapods-keys', {
+    :project => "CloudVisionKit",
+    :target => "CloudVisionKit_Example",
+    :keys => [
+        "GoogleCloudVisionAPIKey"
+    ]
+}
+
 target 'CloudVisionKit_Example', :exclusive => true do
     pod "CloudVisionKit", :path => "../"
 end

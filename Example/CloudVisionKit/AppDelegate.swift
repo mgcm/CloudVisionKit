@@ -8,12 +8,12 @@
 
 import UIKit
 import CloudVisionKit
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let request = GCVSingleRequest(image: data, features: [feature])
         let r = GCVRequest(requests: [request])
 
-        let api = CloudVision()
+        let api = CloudVision(apiKey: CloudvisionkitKeys().googleCloudVisionAPIKey())
         api.annotateImage(r) {
             response in
 

@@ -1,22 +1,27 @@
 PODS:
-  - Alamofire (3.1.4)
+  - Alamofire (3.1.5)
   - CloudVisionKit (0.1.0):
     - Alamofire (~> 3.0)
     - SwiftyJSON (~> 2.3.1)
+  - Keys (1.0.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - CloudVisionKit (from `../`)
+  - Keys (from `Pods/CocoaPodsKeys`)
   - SwiftyJSON (~> 2.3.1)
 
 EXTERNAL SOURCES:
   CloudVisionKit:
     :path: ../
+  Keys:
+    :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
-  Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   CloudVisionKit: a77641c9d33b58ba3b38cfe3e6a5190dee040add
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

@@ -9,16 +9,19 @@
 import Foundation
 import Alamofire
 
-
 internal class GCVApiManager {
 
-    private static let apiKey = "AIzaSyCnnnni9jA-QlKhSVdWeROM57mhg6Uft0A"
     private static let apiVersion = "v1alpha1"
     private static let baseURL = "https://vision.googleapis.com/" + GCVApiManager.apiVersion + "/images:annotate"
+    private var apiKey: String?
+
+    init(apiKey: String) {
+        self.apiKey = apiKey
+    }
 
     private func buildQueryURL() -> NSURL? {
         if let components = NSURLComponents(string: GCVApiManager.baseURL) {
-            components.queryItems = [NSURLQueryItem(name: "key", value: GCVApiManager.apiKey)]
+            components.queryItems = [NSURLQueryItem(name: "key", value: self.apiKey)]
             return components.URL
         }
         return nil
@@ -42,11 +45,26 @@ internal class GCVApiManager {
         request.responseJSON { (response) -> Void in
             if let JSON = response.result.value {
                 let resp = JSON as! Dictionary<String, AnyObject>
-                let rs = resp["responses"] as! Array<AnyObject>
 
-                let r = GCVResponse(values: rs)
-                closure(r)
+                if self.hasErrors(resp) {
+                    let error = resp["error"] as! Dictionary<String, AnyObject>
+                    let r = GCVResponse(error: error)
+                    closure(r)
+                } else {
+                    let rs = resp["responses"] as! Array<AnyObject>
+
+                    let r = GCVResponse(values: rs)
+                    closure(r)
+                }
             }
+        }
+    }
+
+    private func hasErrors(response: Dictionary<String, AnyObject>) -> Bool {
+        if let _ = response["error"] as? Dictionary<String, AnyObject> {
+            return true
+        } else {
+            return false
         }
     }
 }
