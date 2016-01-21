@@ -35,9 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         api.annotateImage(r) {
             response in
 
-            for r in response.responses {
-                for a in r.labelAnnotations {
-                    NSLog("result: %@", a.description)
+            if let responses = response.responses {
+                for r in responses {
+                    for a in r.labelAnnotations! {
+                        NSLog("result: %@", a.description!)
+                    }
                 }
             }
         }

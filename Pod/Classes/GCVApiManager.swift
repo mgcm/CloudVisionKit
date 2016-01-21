@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Unbox
 
 internal class GCVApiManager {
 
@@ -45,26 +46,9 @@ internal class GCVApiManager {
         request.responseJSON { (response) -> Void in
             if let JSON = response.result.value {
                 let resp = JSON as! Dictionary<String, AnyObject>
-
-                if self.hasErrors(resp) {
-                    let error = resp["error"] as! Dictionary<String, AnyObject>
-                    let r = GCVResponse(error: error)
-                    closure(r)
-                } else {
-                    let rs = resp["responses"] as! Array<AnyObject>
-
-                    let r = GCVResponse(values: rs)
-                    closure(r)
-                }
+                let r: GCVResponse = Unbox(resp)!
+                closure(r)
             }
-        }
-    }
-
-    private func hasErrors(response: Dictionary<String, AnyObject>) -> Bool {
-        if let _ = response["error"] as? Dictionary<String, AnyObject> {
-            return true
-        } else {
-            return false
         }
     }
 }

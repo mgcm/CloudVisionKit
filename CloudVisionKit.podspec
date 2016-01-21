@@ -28,4 +28,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'Alamofire', '~> 3.0'
   s.dependency 'SwiftyJSON', '~> 2.3.1'
+  s.dependency 'Unbox', '~> 1.3'
 end
