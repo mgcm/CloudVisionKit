@@ -15,7 +15,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		C29C0E8C1C4443A10056FEA0 /* faulkner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C29C0E8B1C4443A10056FEA0 /* faulkner.jpg */; };
+		C2C5BCEC1C74D4AC000BD220 /* faulkner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C5BCEA1C74D4AC000BD220 /* faulkner.jpg */; };
+		C2C5BCED1C74D4AC000BD220 /* team.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C5BCEB1C74D4AC000BD220 /* team.jpg */; };
 		EADBDEE0A48A4C79A10BC660 /* Pods_CloudVisionKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4C60832CCE9117364E034E /* Pods_CloudVisionKit_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +48,8 @@
 		A3132291F4CAFB03D1A8AEDA /* Pods-CloudVisionKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BB4C60832CCE9117364E034E /* Pods_CloudVisionKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudVisionKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2021984BDE07719530C5B29 /* CloudVisionKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CloudVisionKit.podspec; path = ../CloudVisionKit.podspec; sourceTree = "<group>"; };
-		C29C0E8B1C4443A10056FEA0 /* faulkner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faulkner.jpg; sourceTree = "<group>"; };
+		C2C5BCEA1C74D4AC000BD220 /* faulkner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faulkner.jpg; sourceTree = "<group>"; };
+		C2C5BCEB1C74D4AC000BD220 /* team.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = team.jpg; sourceTree = "<group>"; };
 		CCBC5FB63BDDECDA65C1B816 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E3275CD21BA7C08B11726E04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F0C36E18E9BA1BF2675642B5 /* Pods-CloudVisionKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,11 +122,12 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				C2C5BCE91C74D4AC000BD220 /* Images */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			name = "Example for CloudVisionKit";
 			path = CloudVisionKit;
@@ -133,7 +136,6 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C29C0E8B1C4443A10056FEA0 /* faulkner.jpg */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -164,6 +166,15 @@
 				CCBC5FB63BDDECDA65C1B816 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		C2C5BCE91C74D4AC000BD220 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C2C5BCEA1C74D4AC000BD220 /* faulkner.jpg */,
+				C2C5BCEB1C74D4AC000BD220 /* team.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				C2C5BCED1C74D4AC000BD220 /* team.jpg in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				C29C0E8C1C4443A10056FEA0 /* faulkner.jpg in Resources */,
+				C2C5BCEC1C74D4AC000BD220 /* faulkner.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

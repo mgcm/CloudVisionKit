@@ -1,6 +1,6 @@
 //
-//  CloudVision.swift
-//  GCV
+//  GCVEntityAnnotation.swift
+//  CloudVisionKit
 //
 //  Created by Milton Moura on 27/12/15.
 //  Copyright © 2015 mgcm. All rights reserved.
@@ -15,6 +15,10 @@ public struct GCVEntityAnnotation: Unboxable {
     public var score:           Float?
     public var confidence:      Float?
     public var topicality:      Float?
+
+    // boundingPoly
+    // locations []
+    // properties []
 
     public init(unboxer: Unboxer) {
         self.mid = unboxer.unbox("mid")

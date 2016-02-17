@@ -20,14 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let bundle = NSBundle.mainBundle()
 
-        guard let path = bundle.pathForResource("faulkner", ofType: "jpg") else {
+        guard let path = bundle.pathForResource("team", ofType: "jpg") else {
             NSLog("Image not found.")
             return true
         }
 
         let data = NSData(contentsOfFile: path)!
 
-        let feature = GCVFeature(type: .Label, maxResults: 10)
+        let feature = GCVFeature(type: .Face, maxResults: 1000)
         let request = GCVSingleRequest(image: data, features: [feature])
         let r = GCVRequest(requests: [request])
 
@@ -37,9 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             if let responses = response.responses {
                 for r in responses {
-                    for a in r.labelAnnotations! {
-                        NSLog("result: %@", a.description!)
-                    }
+                    NSLog("result: %i faces found", r.faceAnnotations!.count)
                 }
             }
         }

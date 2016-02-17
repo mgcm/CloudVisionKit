@@ -1,6 +1,6 @@
 //
-//  CloudVision.swift
-//  GCV
+//  GCVFeature.swift
+//  CloudVisionKit
 //
 //  Created by Milton Moura on 27/12/15.
 //  Copyright © 2015 mgcm. All rights reserved.

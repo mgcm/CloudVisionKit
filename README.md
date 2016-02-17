@@ -34,3 +34,18 @@ Milton Moura, miltonmoura@gmail.com
 ## License
 
 CloudVisionKit is available under the MIT license. See the LICENSE file for more info.
+
+## TODO
+
+Currently missing features / types:
+
+AnnotateImageRequest 
+    > ImageContext
+    > LatLongRect
+    > LatLng
+
+EntityAnnotation
+    > boundingPoly
+    > locations []
+    > properties []
+
