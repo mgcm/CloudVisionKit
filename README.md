@@ -37,15 +37,4 @@ CloudVisionKit is available under the MIT license. See the LICENSE file for more
 
 ## TODO
 
-Currently missing features / types:
-
-AnnotateImageRequest 
-    > ImageContext
-    > LatLongRect
-    > LatLng
-
-EntityAnnotation
-    > boundingPoly
-    > locations []
-    > properties []
-
+Currently missing Google Cloud Storage Image support 

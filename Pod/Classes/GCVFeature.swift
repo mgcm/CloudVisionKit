@@ -9,13 +9,15 @@
 import SwiftyJSON
 
 public enum GCVFeatureDetectionType: String {
-    case Face =     "FACE_DETECTION"
-    case LandMark = "LANDMARK_DETECTION"
-    case Logo =     "LOGO_DETECTION"
-    case Label =    "LABEL_DETECTION"
-    case Text =     "TEXT_DETECTION"
+    case Unspecified        = "TYPE_UNSPECIFIED"
+    case Face               = "FACE_DETECTION"
+    case LandMark           = "LANDMARK_DETECTION"
+    case Logo               = "LOGO_DETECTION"
+    case Label              = "LABEL_DETECTION"
+    case Text               = "TEXT_DETECTION"
+    case SafeSearch         = "SAFE_SEARCH_DETECTION"
+    case ImageProperties    = "IMAGE_PROPERTIES"
 }
-
 
 public struct GCVFeature {
     public var type:        GCVFeatureDetectionType

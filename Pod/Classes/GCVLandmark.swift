@@ -8,7 +8,6 @@
 
 import Unbox
 
-
 public struct GCVPosition: Unboxable {
     public var x: Float?
     public var y: Float?
