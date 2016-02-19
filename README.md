@@ -7,7 +7,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 1. Xcode 7.x / Swift 2.1
-2. Sign up for the [Google Cloud Vision API - Limited Preview](https://services.google.com/fb/forms/visionapialpha/)
+2. An API key for Google Vision API
 
 ## Setup
 
