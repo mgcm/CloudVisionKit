@@ -16,10 +16,10 @@ plugin 'cocoapods-keys', {
     ]
 }
 
-target 'CloudVisionKit_Example', :exclusive => true do
+target 'CloudVisionKit_Example' do
     pod "CloudVisionKit", :path => "../"
 end
 
-target 'CloudVisionKit_Tests', :exclusive => true do
+target 'CloudVisionKit_Tests' do
     pod "CloudVisionKit", :path => "../"
 end
