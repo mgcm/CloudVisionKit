@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CloudVisionKit"
-  s.version          = "0.1.0"
+  s.version          = "0.3.0"
   s.summary          = "A Swift interface for Google's Cloud Vision API."
 
   s.description      = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/mgcm/CloudVisionKit.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/mgcm'
 
-  s.ios.deployment_target = '8.3'
+  s.ios.deployment_target = '9.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
     'CloudVisionKit' => ['Pod/Assets/*.png']
   }
 
-  s.dependency 'Alamofire', '~> 3.0'
-  s.dependency 'SwiftyJSON', '~> 2.3.1'
-  s.dependency 'Unbox', '~> 1.3'
+  s.dependency 'Alamofire', '~> 4.0.1'
+  s.dependency 'SwiftyJSON', '~> 3.1.1'
+  s.dependency 'Unbox', '~> 2.1'
 end

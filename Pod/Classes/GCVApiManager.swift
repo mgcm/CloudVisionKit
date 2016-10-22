@@ -30,41 +30,42 @@ import Unbox
 
 internal class GCVApiManager {
 
-    private static let apiVersion = "v1"
-    private static let baseURL = "https://vision.googleapis.com/" + GCVApiManager.apiVersion + "/images:annotate"
-    private var apiKey: String?
+    fileprivate static let apiVersion = "v1"
+    fileprivate static let baseURL = "https://vision.googleapis.com/" + GCVApiManager.apiVersion + "/images:annotate"
+    fileprivate var apiKey: String?
 
     init(apiKey: String) {
         self.apiKey = apiKey
     }
 
-    private func buildQueryURL() -> NSURL? {
-        if let components = NSURLComponents(string: GCVApiManager.baseURL) {
-            components.queryItems = [NSURLQueryItem(name: "key", value: self.apiKey)]
-            return components.URL
+    fileprivate func buildQueryURL() -> URL? {
+        if var components = URLComponents(string: GCVApiManager.baseURL) {
+            components.queryItems = [URLQueryItem(name: "key", value: self.apiKey)]
+            return components.url
         }
         return nil
     }
 
-    private func requestHeaders() -> [String: String] {
+    fileprivate func requestHeaders() -> [String: String] {
         return ["Content-Type": "application/json"];
     }
 
-    internal func performRequest(payload: [String: AnyObject]?, closure: (GCVResponse) -> Void) throws -> Void {
-        let request = Alamofire.request(.POST, self.buildQueryURL()!, parameters: payload, encoding: .JSON, headers: self.requestHeaders())
+    internal func performRequest(_ payload: [String: AnyObject]?, closure: @escaping (GCVResponse) -> Void) throws -> Void {
+        //let request = Alamofire.request(.POST, self.buildQueryURL()!, parameters: payload, encoding: .JSON, headers: self.requestHeaders())
+        let request = Alamofire.request(self.buildQueryURL()!, method: .post, parameters: payload, encoding: JSONEncoding.default)
 
-        if let
-            urlRequest = request.request,
-            httpBody = urlRequest.HTTPBody {
-                if httpBody.length > 8000000 {
-                    throw GCVApiError.RequestSizeExceeded
+        if let urlRequest = request.request {
+            if let httpBody = urlRequest.httpBody {
+                if httpBody.count > 8000000 {
+                    throw GCVApiError.requestSizeExceeded
                 }
+            }
         }
 
         request.responseJSON { (response) -> Void in
             if let JSON = response.result.value {
                 let resp = JSON as! Dictionary<String, AnyObject>
-                let r: GCVResponse = Unbox(resp)!
+                let r: GCVResponse = try! unbox(dictionary: resp)
                 closure(r)
             }
         }

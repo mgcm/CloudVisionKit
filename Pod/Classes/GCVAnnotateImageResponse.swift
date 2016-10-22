@@ -34,10 +34,10 @@ public struct GCVAnnotateImageResponse: Unboxable {
     public var textAnnotations:     [GCVEntityAnnotation]?
 
     public init(unboxer: Unboxer) {
-        self.faceAnnotations = unboxer.unbox("faceAnnotations")
-        self.landmarkAnnotations = unboxer.unbox("landmarkAnnotations")
-        self.logoAnnotations = unboxer.unbox("logoAnnotations")
-        self.labelAnnotations = unboxer.unbox("labelAnnotations")
-        self.textAnnotations = unboxer.unbox("textAnnotations")
+        self.faceAnnotations = unboxer.unbox(key: "faceAnnotations")
+        self.landmarkAnnotations = unboxer.unbox(key: "landmarkAnnotations")
+        self.logoAnnotations = unboxer.unbox(key: "logoAnnotations")
+        self.labelAnnotations = unboxer.unbox(key: "labelAnnotations")
+        self.textAnnotations = unboxer.unbox(key: "textAnnotations")
     }
 }

@@ -32,8 +32,8 @@ public struct GCVStatus: Unboxable {
     public var status:  String
 
     public init(unboxer: Unboxer) {
-        self.message = unboxer.unbox("message")
-        self.status = unboxer.unbox("status")
-        self.code = unboxer.unbox("code")
+        self.message = try! unboxer.unbox(key: "message")
+        self.status = try! unboxer.unbox(key: "status")
+        self.code = try! unboxer.unbox(key: "code")
     }
 }

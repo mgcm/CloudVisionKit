@@ -32,7 +32,7 @@ public struct GCVLatLng: Unboxable
     public var longitude: Float
 
     public init(unboxer: Unboxer) {
-        self.latitude = unboxer.unbox("latitude")
-        self.longitude = unboxer.unbox("longitude")
+        self.latitude = try! unboxer.unbox(key: "latitude")
+        self.longitude = try! unboxer.unbox(key: "longitude")
     }
 }

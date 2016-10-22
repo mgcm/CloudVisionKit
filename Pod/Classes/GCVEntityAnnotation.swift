@@ -30,7 +30,7 @@ public struct GCVLocationInfo: Unboxable {
     public var latLng: GCVLatLng?
 
     public init(unboxer: Unboxer) {
-        self.latLng = unboxer.unbox("latLng")
+        self.latLng = unboxer.unbox(key: "latLng")
     }
 }
 
@@ -39,8 +39,8 @@ public struct GCVProperty: Unboxable {
     public var value: String?
 
     public init(unboxer: Unboxer) {
-        self.name = unboxer.unbox("name")
-        self.value = unboxer.unbox("value")
+        self.name = unboxer.unbox(key: "name")
+        self.value = unboxer.unbox(key: "value")
     }
 }
 
@@ -56,13 +56,13 @@ public struct GCVEntityAnnotation: Unboxable {
     public var properties:      [GCVProperty]?
 
     public init(unboxer: Unboxer) {
-        self.mid = unboxer.unbox("mid")
-        self.locale = unboxer.unbox("locale")
-        self.description = unboxer.unbox("description")
-        self.score = unboxer.unbox("score")
-        self.confidence = unboxer.unbox("confidence")
-        self.topicality = unboxer.unbox("topicality")
-        self.locations = unboxer.unbox("locations")
-        self.properties = unboxer.unbox("properties")
+        self.mid = unboxer.unbox(key: "mid")
+        self.locale = unboxer.unbox(key: "locale")
+        self.description = unboxer.unbox(key: "description")
+        self.score = unboxer.unbox(key: "score")
+        self.confidence = unboxer.unbox(key: "confidence")
+        self.topicality = unboxer.unbox(key: "topicality")
+        self.locations = unboxer.unbox(key: "locations")
+        self.properties = unboxer.unbox(key: "properties")
     }
 }

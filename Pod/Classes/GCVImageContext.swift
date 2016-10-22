@@ -32,8 +32,8 @@ public struct GCVLatLongRect: Unboxable
     public var maxLatLng: GCVLatLng
 
     public init(unboxer: Unboxer) {
-        self.minLatLng = unboxer.unbox("minLatLng")
-        self.maxLatLng = unboxer.unbox("maxLatLng")
+        self.minLatLng = try! unboxer.unbox(key: "minLatLng")
+        self.maxLatLng = try! unboxer.unbox(key: "maxLatLng")
     }
 }
 
@@ -43,7 +43,7 @@ public struct ImageContext: Unboxable
     public var languageHints: [String]?
 
     public init(unboxer: Unboxer) {
-        self.latLongRect = unboxer.unbox("latLongRect")
-        self.languageHints = unboxer.unbox("languageHints")
+        self.latLongRect = unboxer.unbox(key: "latLongRect")
+        self.languageHints = unboxer.unbox(key: "languageHints")
     }
 }

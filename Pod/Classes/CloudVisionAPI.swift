@@ -27,16 +27,36 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 final public class CloudVision {
 
-    private var apiKey: String?
+    fileprivate var apiKey: String?
 
     public init(apiKey: String) {
         self.apiKey = apiKey
     }
 
-    public func annotateImage(request: GCVRequest, closure: (GCVResponse) -> Void) {
+    public func annotateImage(_ request: GCVRequest, closure: @escaping (GCVResponse) -> Void) {
         let apiManager = GCVApiManager(apiKey: self.apiKey!)
         
         do {
@@ -47,11 +67,11 @@ final public class CloudVision {
                 }
                 closure(response)
             })
-        } catch GCVApiError.RequestSizeExceeded {
+        } catch GCVApiError.requestSizeExceeded {
             NSLog("GCV Usage Limit Exceeded: Request Size > 8 MB")
-        } catch GCVApiError.ImageDataSizeExceeded {
+        } catch GCVApiError.imageDataSizeExceeded {
             NSLog("GCV Usage Limit Exceeded: Image size > 2 MB")
-        } catch GCVApiError.ImagesPerRequestExceeded {
+        } catch GCVApiError.imagesPerRequestExceeded {
             NSLog("GCV Usage Limit Exceeded: Max Images Per Request > 16")
         } catch {
             NSLog("GCV Error: Request Failed")

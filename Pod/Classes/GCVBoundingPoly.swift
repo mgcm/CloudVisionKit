@@ -25,14 +25,34 @@
 //  SOFTWARE.
 
 import Unbox
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 public struct GCVVertex: Unboxable {
     public var x: Float?
     public var y: Float?
 
     public init(unboxer: Unboxer) {
-        self.x = unboxer.unbox("x")
-        self.y = unboxer.unbox("y")
+        self.x = unboxer.unbox(key: "x")
+        self.y = unboxer.unbox(key: "y")
     }
 }
 
@@ -41,7 +61,7 @@ public struct GCVBoundingPoly: Unboxable {
     public var vertices: [GCVVertex]?
 
     public init(unboxer: Unboxer) {
-        self.vertices = unboxer.unbox("vertices")
+        self.vertices = unboxer.unbox(key: "vertices")
     }
 }
 

@@ -43,9 +43,9 @@ public struct GCVRequest {
         }
 
         guard imageCount <= 16 else {
-            throw GCVApiError.ImagesPerRequestExceeded
+            throw GCVApiError.imagesPerRequestExceeded
         }
 
-        return ["requests": JSON(allRequests).rawValue]
+        return ["requests": JSON(allRequests).rawValue as AnyObject]
     }
 }

@@ -33,9 +33,9 @@ public struct GCVSafeSearchAnnotation: Unboxable {
     public var violence: String?
 
     public init(unboxer: Unboxer) {
-        self.adult = unboxer.unbox("adult")
-        self.spoof = unboxer.unbox("spoof")
-        self.medical = unboxer.unbox("medical")
-        self.violence = unboxer.unbox("violence")
+        self.adult = unboxer.unbox(key: "adult")
+        self.spoof = unboxer.unbox(key: "spoof")
+        self.medical = unboxer.unbox(key: "medical")
+        self.violence = unboxer.unbox(key: "violence")
     }
 }

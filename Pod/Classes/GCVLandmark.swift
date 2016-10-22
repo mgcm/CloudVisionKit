@@ -32,9 +32,9 @@ public struct GCVPosition: Unboxable {
     public var z: Float?
 
     public init(unboxer: Unboxer) {
-        self.x = unboxer.unbox("x")
-        self.y = unboxer.unbox("y")
-        self.z = unboxer.unbox("z")
+        self.x = unboxer.unbox(key: "x")
+        self.y = unboxer.unbox(key: "y")
+        self.z = unboxer.unbox(key: "z")
     }
 }
 
@@ -44,7 +44,7 @@ public struct GCVLandmark: Unboxable {
     public var position: GCVPosition?
 
     public init(unboxer: Unboxer) {
-        self.type = unboxer.unbox("type")
-        self.position = unboxer.unbox("position")
+        self.type = unboxer.unbox(key: "type")
+        self.position = unboxer.unbox(key: "position")
     }
 }

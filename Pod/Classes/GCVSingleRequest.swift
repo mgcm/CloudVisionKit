@@ -27,10 +27,10 @@
 import SwiftyJSON
 
 public struct GCVSingleRequest {
-    public var image:       NSData
+    public var image:       Data
     public var features:    [GCVFeature]
 
-    public init(image: NSData, features: [GCVFeature]) {
+    public init(image: Data, features: [GCVFeature]) {
         self.image = image
         self.features = features
     }
@@ -41,16 +41,11 @@ public struct GCVSingleRequest {
             allFeatures += [f.json()]
         }
 
-        if image.length > 2000000 {
-            throw GCVApiError.ImageDataSizeExceeded
+        if image.count > 2000000 {
+            throw GCVApiError.imageDataSizeExceeded
         }
 
-        let dict: [String: JSON] = ["image": JSON(["content": image.base64EncodedStringWithOptions(
-            [
-                NSDataBase64EncodingOptions.EncodingEndLineWithCarriageReturn,
-                NSDataBase64EncodingOptions.Encoding64CharacterLineLength
-            ])
-            ]), "features": JSON(allFeatures)]
+        let dict: [String: JSON] = ["image": JSON(["content": image.base64EncodedString()]), "features": JSON(allFeatures)]
         return JSON(dict)
     }
 }

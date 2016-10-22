@@ -31,7 +31,7 @@ public struct GCVResponse: Unboxable {
     public var error:       GCVStatus?
 
     public init(unboxer: Unboxer) {
-        self.responses = unboxer.unbox("responses")
-        self.error = unboxer.unbox("error")
+        self.responses = unboxer.unbox(key: "responses")
+        self.error = unboxer.unbox(key: "error")
     }
 }

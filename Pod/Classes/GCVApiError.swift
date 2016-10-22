@@ -24,9 +24,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-public enum GCVApiError : ErrorType {
-    case InvalidCredentials
-    case RequestSizeExceeded
-    case ImageDataSizeExceeded
-    case ImagesPerRequestExceeded
+public enum GCVApiError : Error {
+    case invalidCredentials
+    case requestSizeExceeded
+    case imageDataSizeExceeded
+    case imagesPerRequestExceeded
 }

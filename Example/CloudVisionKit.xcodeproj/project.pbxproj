@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1124A6398CA733F279CF7A90 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE562281B2081BFBA1ADFE0 /* Pods.framework */; };
-		47552FA7638817B71EBFF638 /* Pods_CloudVisionKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CBDFF64856BBCD22884BB4 /* Pods_CloudVisionKit_Tests.framework */; };
+		22B7A283FC774ACC4D109791 /* Pods_CloudVisionKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AA2EBC973369E8B1ABAFFD /* Pods_CloudVisionKit_Example.framework */; };
+		4D09A8DCF2B369161AFCC423 /* Pods_CloudVisionKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD77E70F88F5D0D4774E07F /* Pods_CloudVisionKit_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -17,7 +17,6 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C2C5BCEC1C74D4AC000BD220 /* faulkner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C5BCEA1C74D4AC000BD220 /* faulkner.jpg */; };
 		C2C5BCED1C74D4AC000BD220 /* team.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C5BCEB1C74D4AC000BD220 /* team.jpg */; };
-		EADBDEE0A48A4C79A10BC660 /* Pods_CloudVisionKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4C60832CCE9117364E034E /* Pods_CloudVisionKit_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13D30C342D3157B7A8D4D9FF /* Pods-CloudVisionKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		49CBDFF64856BBCD22884BB4 /* Pods_CloudVisionKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudVisionKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		527E0A6EEDAD505A943AFE1D /* Pods-CloudVisionKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FD77E70F88F5D0D4774E07F /* Pods_CloudVisionKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudVisionKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* CloudVisionKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudVisionKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,15 +41,17 @@
 		607FACE51AFB9204008FA782 /* CloudVisionKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudVisionKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		7154EF1163966E5BC0BA4F5F /* Pods-CloudVisionKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7D0A0FE59792269AF357D991 /* Pods-CloudVisionKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		84AA2EBC973369E8B1ABAFFD /* Pods_CloudVisionKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudVisionKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE562281B2081BFBA1ADFE0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3132291F4CAFB03D1A8AEDA /* Pods-CloudVisionKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		BB4C60832CCE9117364E034E /* Pods_CloudVisionKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudVisionKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B9BBF3364B99917E4D1389 /* Pods-CloudVisionKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C2021984BDE07719530C5B29 /* CloudVisionKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CloudVisionKit.podspec; path = ../CloudVisionKit.podspec; sourceTree = "<group>"; };
 		C2C5BCEA1C74D4AC000BD220 /* faulkner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faulkner.jpg; sourceTree = "<group>"; };
 		C2C5BCEB1C74D4AC000BD220 /* team.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = team.jpg; sourceTree = "<group>"; };
 		CCBC5FB63BDDECDA65C1B816 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E3275CD21BA7C08B11726E04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F0C36E18E9BA1BF2675642B5 /* Pods-CloudVisionKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E6268978D2756FEA59AB3BAF /* Pods-CloudVisionKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudVisionKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EADBDEE0A48A4C79A10BC660 /* Pods_CloudVisionKit_Example.framework in Frameworks */,
-				1124A6398CA733F279CF7A90 /* Pods.framework in Frameworks */,
+				22B7A283FC774ACC4D109791 /* Pods_CloudVisionKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,30 +67,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47552FA7638817B71EBFF638 /* Pods_CloudVisionKit_Tests.framework in Frameworks */,
+				4D09A8DCF2B369161AFCC423 /* Pods_CloudVisionKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06CFAFFA5E7BC2661C19B3BF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F0C36E18E9BA1BF2675642B5 /* Pods-CloudVisionKit_Example.debug.xcconfig */,
-				13D30C342D3157B7A8D4D9FF /* Pods-CloudVisionKit_Example.release.xcconfig */,
-				527E0A6EEDAD505A943AFE1D /* Pods-CloudVisionKit_Tests.debug.xcconfig */,
-				A3132291F4CAFB03D1A8AEDA /* Pods-CloudVisionKit_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		1CA5EE2235270AA625B620D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB4C60832CCE9117364E034E /* Pods_CloudVisionKit_Example.framework */,
-				49CBDFF64856BBCD22884BB4 /* Pods_CloudVisionKit_Tests.framework */,
 				8EE562281B2081BFBA1ADFE0 /* Pods.framework */,
+				84AA2EBC973369E8B1ABAFFD /* Pods_CloudVisionKit_Example.framework */,
+				4FD77E70F88F5D0D4774E07F /* Pods_CloudVisionKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,8 +91,8 @@
 				607FACD21AFB9204008FA782 /* Example for CloudVisionKit */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				06CFAFFA5E7BC2661C19B3BF /* Pods */,
 				1CA5EE2235270AA625B620D4 /* Frameworks */,
+				FD28D4BB402D612A522F0A96 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +164,17 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		FD28D4BB402D612A522F0A96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2B9BBF3364B99917E4D1389 /* Pods-CloudVisionKit_Example.debug.xcconfig */,
+				7154EF1163966E5BC0BA4F5F /* Pods-CloudVisionKit_Example.release.xcconfig */,
+				7D0A0FE59792269AF357D991 /* Pods-CloudVisionKit_Tests.debug.xcconfig */,
+				E6268978D2756FEA59AB3BAF /* Pods-CloudVisionKit_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,12 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CloudVisionKit_Example" */;
 			buildPhases = (
-				738C3E32FB90CF687E5D5216 /* Check Pods Manifest.lock */,
+				49FDB3600E52F3EE570510D1 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				BA37E0421ED2B3A2EBEFE90A /* Embed Pods Frameworks */,
-				A413082DFF0A612C0AC2ED45 /* Copy Pods Resources */,
+				A19B3870D0A3B11149DF8886 /* [CP] Embed Pods Frameworks */,
+				EE7CAAD7645800504882FCC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,12 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CloudVisionKit_Tests" */;
 			buildPhases = (
-				FF3D93312B0DF11276A9AFCC /* Check Pods Manifest.lock */,
+				0E0CB74986A868A63C828E9D /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				132D8DBDB0C08E9F4DF32D1C /* Embed Pods Frameworks */,
-				E2307D5771722555C96855AC /* Copy Pods Resources */,
+				E2FEAB83110B17FFCA89F4DC /* [CP] Embed Pods Frameworks */,
+				56CC1EA0D0C6A0B9D8F28D04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,14 +226,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -282,74 +282,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		132D8DBDB0C08E9F4DF32D1C /* Embed Pods Frameworks */ = {
+		0E0CB74986A868A63C828E9D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		738C3E32FB90CF687E5D5216 /* Check Pods Manifest.lock */ = {
+		49FDB3600E52F3EE570510D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A413082DFF0A612C0AC2ED45 /* Copy Pods Resources */ = {
+		56CC1EA0D0C6A0B9D8F28D04 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA37E0421ED2B3A2EBEFE90A /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2307D5771722555C96855AC /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,19 +327,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF3D93312B0DF11276A9AFCC /* Check Pods Manifest.lock */ = {
+		A19B3870D0A3B11149DF8886 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2FEAB83110B17FFCA89F4DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudVisionKit_Tests/Pods-CloudVisionKit_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE7CAAD7645800504882FCC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudVisionKit_Example/Pods-CloudVisionKit_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -435,8 +435,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -459,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -480,8 +482,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -497,43 +501,49 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0C36E18E9BA1BF2675642B5 /* Pods-CloudVisionKit_Example.debug.xcconfig */;
+			baseConfigurationReference = A2B9BBF3364B99917E4D1389 /* Pods-CloudVisionKit_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CloudVisionKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CloudVisionKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13D30C342D3157B7A8D4D9FF /* Pods-CloudVisionKit_Example.release.xcconfig */;
+			baseConfigurationReference = 7154EF1163966E5BC0BA4F5F /* Pods-CloudVisionKit_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CloudVisionKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CloudVisionKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 527E0A6EEDAD505A943AFE1D /* Pods-CloudVisionKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 7D0A0FE59792269AF357D991 /* Pods-CloudVisionKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -547,14 +557,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudVisionKit_Example.app/CloudVisionKit_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3132291F4CAFB03D1A8AEDA /* Pods-CloudVisionKit_Tests.release.xcconfig */;
+			baseConfigurationReference = E6268978D2756FEA59AB3BAF /* Pods-CloudVisionKit_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -564,6 +576,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudVisionKit_Example.app/CloudVisionKit_Example";
 			};
 			name = Release;
