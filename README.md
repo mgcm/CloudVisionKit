@@ -6,7 +6,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-1. Xcode 7.x / Swift 2.1
+1. Xcode 8 / Swift 3
 2. An API key for Google Vision API
 
 ## Setup
@@ -25,4 +25,4 @@ CloudVisionKit is available under the MIT license. See the LICENSE file for more
 
 ## TODO
 
-Currently missing Google Cloud Storage Image support 
+Currently missing Google Cloud Storage Image support
