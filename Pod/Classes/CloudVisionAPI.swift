@@ -70,7 +70,7 @@ final public class CloudVision {
         } catch GCVApiError.requestSizeExceeded {
             NSLog("GCV Usage Limit Exceeded: Request Size > 8 MB")
         } catch GCVApiError.imageDataSizeExceeded {
-            NSLog("GCV Usage Limit Exceeded: Image size > 2 MB")
+            NSLog("GCV Usage Limit Exceeded: Image size > 4 MB")
         } catch GCVApiError.imagesPerRequestExceeded {
             NSLog("GCV Usage Limit Exceeded: Max Images Per Request > 16")
         } catch {
