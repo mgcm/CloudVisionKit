@@ -41,7 +41,7 @@ public struct GCVSingleRequest {
             allFeatures += [f.json()]
         }
 
-        if image.count > 2000000 {
+        if image.count > 4194304 {
             throw GCVApiError.imageDataSizeExceeded
         }
 

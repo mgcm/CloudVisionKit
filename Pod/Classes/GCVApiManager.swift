@@ -51,7 +51,6 @@ internal class GCVApiManager {
     }
 
     internal func performRequest(_ payload: [String: AnyObject]?, closure: @escaping (GCVResponse) -> Void) throws -> Void {
-        //let request = Alamofire.request(.POST, self.buildQueryURL()!, parameters: payload, encoding: .JSON, headers: self.requestHeaders())
         let request = Alamofire.request(self.buildQueryURL()!, method: .post, parameters: payload, encoding: JSONEncoding.default)
 
         if let urlRequest = request.request {
