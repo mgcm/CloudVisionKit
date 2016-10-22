@@ -64,7 +64,7 @@ internal class GCVApiManager {
         request.responseJSON { (response) -> Void in
             if let JSON = response.result.value {
                 let resp = JSON as! Dictionary<String, AnyObject>
-                let r: GCVResponse = Unbox(resp)!
+                let r: GCVResponse = try! Unbox(resp, context: nil)
                 closure(r)
             }
         }
